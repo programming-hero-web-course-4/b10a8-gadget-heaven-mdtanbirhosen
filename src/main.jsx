@@ -14,6 +14,8 @@ import Dashboard from './components/Dashboard/Dashboard';
 import Products from './components/Products/Products';
 import CategoryProducts from './components/categoryProducts/CategoryProducts';
 import ProductDetails from './components/ProductDetails/ProductDetails';
+import Cart from './components/Dashboard/Cart/Cart';
+import Wishlist from './components/Dashboard/Wishlist/Wishlist';
 
 const router = createBrowserRouter([
   {
@@ -45,7 +47,18 @@ const router = createBrowserRouter([
       },
       {
         path: "/dashboard",
-        element: <Dashboard></Dashboard>
+        element: <Dashboard></Dashboard>,
+        children:[
+          {
+            path:'/dashboard',
+            element: <Cart></Cart>
+          },
+          {
+            path:'/dashboard/wishlist',
+            element: <Wishlist></Wishlist>
+
+          }
+        ]
       }
     ]
 

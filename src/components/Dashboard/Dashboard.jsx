@@ -1,12 +1,18 @@
 import React from 'react';
 import ReuseableBanner from '../Header/ReuseableBanner/ReuseableBanner';
-import { useLocation } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
 
 const Dashboard = () => {
-    const {pathname} = useLocation();
+    const { pathname } = useLocation();
     return (
         <div>
-            <ReuseableBanner title={'Dashboard'}></ReuseableBanner>
+            <div>
+                <ReuseableBanner title={'Dashboard'}></ReuseableBanner>
+            </div>
+            <div>
+                <Outlet></Outlet>
+            </div>
+
         </div>
     );
 };

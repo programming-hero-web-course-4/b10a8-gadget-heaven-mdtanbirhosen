@@ -9,10 +9,11 @@ const Root = () => {
     const { pathname } = useLocation();
     return (
         <div className='sora-font bg-[#F6F6F6]'>
-            {((pathname === `/product-details/`)
+            {(pathname === `/product-details/`
                 || pathname === '/statistics'
                 || pathname === '/dashboard'
                 || pathname === '/component'
+                || pathname === '/dashboard/wishlist'
 
             ) || <Banner></Banner>}
             {/* {pathname === categoryLink() && <Banner></Banner>} */}
@@ -21,6 +22,7 @@ const Root = () => {
                 || pathname === '/statistics'
                 || pathname === '/dashboard'
                 || pathname === '/component'
+                || pathname === '/dashboard/wishlist'
             ) && <NavBar></NavBar>}
             <div className='min-h-[calc(100vh-492px)] '>
                 <Outlet></Outlet>

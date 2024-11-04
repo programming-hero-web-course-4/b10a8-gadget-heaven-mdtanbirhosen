@@ -8,6 +8,7 @@ import { BsCart3 } from "react-icons/bs";
 
 
 import ReactStars from "react-rating-stars-component";
+import { addCartProduct, addWishlistProduct, getCartProducts, getWishlistProducts } from '../localData/localData';
 
 
 
@@ -21,7 +22,32 @@ const ProductDetails = () => {
     // react stars
     const roundedRating = Math.round(rating)
     const ratingChanged = (newRating) => {
+        console.log(newRating)
     };
+
+    // add to cart button handler
+    const handleAddToCart = product =>{
+        const previousProducts = getCartProducts()
+        const isExist = previousProducts.find(p => p.product_id == product.product_id)
+        if(!isExist){
+            addCartProduct(product)
+        }
+        else{
+            alert('already exist')
+        }
+    }
+    // Wishlist button handler
+    const handleAddToWishlist = product =>{
+        const previousProducts = getWishlistProducts()
+        const isExist = previousProducts.find(p => p.product_id == product.product_id)
+        if(!isExist){
+            addWishlistProduct(product)
+        }
+        else{
+            alert('already exist')
+        }
+    }
+
     return (
         <div className='bg-[#F6F6F6] sora-font'>
             <NavBar></NavBar>
@@ -63,12 +89,12 @@ const ProductDetails = () => {
                                     <div className='px-4 py-2 rounded-full bg-[#F6F6F6] w-fit font-semibold text-sm'>{rating}</div>
                                 </div>
                                 <div className='flex gap-4 items-center'>
-                                    <div className={`relative hover:text-white  `}>
-                                        <Link> <button className={`px-6 py-3 border rounded-full flex gap-2 items-center font-bold text-lg bg-primary-color text-white`}> <span>Add To Cart</span><BsCart3></BsCart3></button></Link>
-                                        
+                                    <div  >
+                                         <button onClick={() => handleAddToCart(product)} className={`px-6 py-3 border rounded-full flex gap-2 items-center font-bold text-lg bg-primary-color text-white`}> <span>Add To Cart</span><BsCart3></BsCart3></button>
+
                                     </div>
-                                    <div className={`relative hover:text-white `}>
-                                        <Link> <button className={`p-3 text-lg border rounded-full hover:bg-primary-color `}><FaRegHeart></FaRegHeart></button></Link>
+                                    <div >
+                                        <button onClick={() => handleAddToWishlist(product)} className={`p-3 text-lg border rounded-full hover:bg-primary-color `}><FaRegHeart></FaRegHeart></button>
                                     </div>
                                 </div>
                             </div>

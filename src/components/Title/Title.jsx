@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-function Title() {
+function Title({setTitle}) {
   const [title, setTitle] = useState("GadgetHaven");
 
   useEffect(() => {
