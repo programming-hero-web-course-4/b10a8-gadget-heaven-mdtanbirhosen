@@ -8,7 +8,7 @@ import Banner from './components/Header/Banner/Banner';
 const Root = () => {
     const { pathname } = useLocation();
     return (
-        <div className='sora-font bg-[#F6F6F6]'>
+        <div className=' bg-[#F6F6F6]'>
             {(pathname === `/product-details/`
                 || pathname === '/statistics'
                 || pathname === '/dashboard'

@@ -13,11 +13,11 @@ const ReuseableBanner = ({ title, id }) => {
                 ) && <div className='flex gap-4 justify-center items-center'>
                         <Link to={'/dashboard'}>
                         <button 
-                        className={`font-semibold text-lg px-14 py-[14px] bg-primary-color text-white rounded-full mt-5 border-2 border-white 
-                            ${pathname === '/dashboard' && ' text-[#9538E2] bg-white'}`}>
+                        className={`font-semibold text-lg px-14 py-[14px] rounded-full mt-5 border-2 border-white 
+                            ${pathname === '/dashboard' ? 'bg-white text-primary-color': 'bg-primary-color text-white'}`}>
                             Cart
                         </button></Link>
-                        <Link to={'/dashboard/wishlist'}><button className={`font-semibold text-lg px-14 py-[14px] bg-primary-color text-white rounded-full mt-5 border-2 border-white   ${pathname === '/dashboard/wishlist' && ' text-[#9538E2] bg-white'}`}>Wishlist</button></Link>
+                        <Link to={'/dashboard/wishlist'}><button className={`font-semibold text-lg px-14 py-[14px]  rounded-full mt-5 border-2 border-white   ${pathname === '/dashboard/wishlist' ? 'bg-white text-primary-color':'bg-primary-color text-white'}`}>Wishlist</button></Link>
                     </div>}
             </div>
         </div>
