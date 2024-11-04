@@ -143,6 +143,21 @@
         "rating": 4.4
     },
     {
+        "product_id": "PH004",
+        "product_title": "iPhone 14 pro",
+        "product_image": "https://m-cdn.phonearena.com/images/phones/83629-350/Apple-iPhone-14-Pro.jpg?w=1",
+        "category": "iPhone",
+        "price": 829.99,
+        "description": "Apple's latest iPhone with A15 Bionic chip and advanced dual-camera system.",
+        "Specification": [
+            "A15 Bionic",
+            "128GB Storage",
+            "6.1-inch Super Retina XDR Display"
+        ],
+        "availability": true,
+        "rating": 4.6
+    },
+    {
         "product_id": "AC001",
         "product_title": "Sony WH-1000XM4",
         "product_image": "https://www.onixbd.com/image/cache/catalog/Accessories/headphone/sony/wh-1000xm4/sony-wh-1000xm4-wireless-headphone-4-412x412.jpg",

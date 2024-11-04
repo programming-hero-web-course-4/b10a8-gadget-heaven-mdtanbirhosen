@@ -7,7 +7,7 @@ const Footer = () => {
                 <h1 className='font-bold text-3xl'>Gadget Heaven</h1>
                 <p className='font-medium text-gray-500'>Leading the way in cutting-edge technology and innovation.</p>
                 <div className="divider"></div>
-                <div className='flex justify-evenly'>
+                <div className='flex justify-evenly sm:flex-row flex-col gap-6'>
                     <div>
                         <h3 className='font-semibold text-xl'>Services</h3>
                         <ul className='text-gray-500'>
