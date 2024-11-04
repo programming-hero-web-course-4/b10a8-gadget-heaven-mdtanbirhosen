@@ -1,0 +1,237 @@
+[
+    {
+        "product_id": "LP001",
+        "product_title": "Dell Inspiron 15",
+        "product_image": "https://rosetech.com.bd/wp-content/uploads/2021/01/dell-inspiron-15-3580-1-500x500-1.jpg",
+        "category": "Laptop",
+        "price": 549.99,
+        "description": "A versatile 15-inch laptop with the latest Intel processors, plenty of storage, and a stunning display.",
+        "Specification": [
+            "Intel Core i5",
+            "8GB RAM",
+            "256GB SSD",
+            "15.6-inch FHD Display"
+        ],
+        "availability": true,
+        "rating": 4.5
+    },
+    {
+        "product_id": "LP002",
+        "product_title": "HP Pavilion x360",
+        "product_image": "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08212326.png",
+        "category": "Laptop",
+        "price": 629.99,
+        "description": "A sleek convertible laptop with a flexible 360-degree hinge and powerful performance for productivity.",
+        "Specification": [
+            "Intel Core i5",
+            "8GB RAM",
+            "512GB SSD",
+            "14-inch FHD Touch Display"
+        ],
+        "availability": true,
+        "rating": 4.3
+    },
+    {
+        "product_id": "LP003",
+        "product_title": "Acer Aspire 5",
+        "product_image": "https://www.ucc.com.bd/image/cache/catalog/laptop/acer/acer-aspire-5/180dd82a-99a6-4a0f-a8d9-31526440898e22041014-550x550.jpg.webp",
+        "category": "Laptop",
+        "price": 499.99,
+        "description": "A budget-friendly laptop offering efficient performance for everyday computing tasks.",
+        "Specification": [
+            "Intel Core i3",
+            "4GB RAM",
+            "128GB SSD",
+            "15.6-inch HD Display"
+        ],
+        "availability": true,
+        "rating": 4.1
+    },
+    {
+        "product_id": "LP004",
+        "product_title": "Apple MacBook Air M1",
+        "product_image": "https://brotherselectronicsbd.com/image/cache/catalog/demo/Laptop/Air%20M1/macbookairm1-800x800.png",
+        "category": "Laptop",
+        "price": 999.99,
+        "description": "The thinnest and lightest Apple laptop with M1 chip, delivering exceptional performance and battery life.",
+        "Specification": [
+            "Apple M1 chip",
+            "8GB RAM",
+            "256GB SSD",
+            "13.3-inch Retina Display"
+        ],
+        "availability": true,
+        "rating": 4.8
+    },
+    {
+        "product_id": "LP005",
+        "product_title": "Lenovo ThinkPad X1 Carbon",
+        "product_image": "https://ayota.com.bd/cdn/shop/files/LenovoX1CarbonUsed_1024x.png?v=1714040175",
+        "category": "Laptop",
+        "price": 1299.99,
+        "description": "An ultra-light business laptop with powerful performance and robust security features.",
+        "Specification": [
+            "Intel Core i7",
+            "16GB RAM",
+            "512GB SSD",
+            "14-inch FHD Display"
+        ],
+        "availability": true,
+        "rating": 4.6
+    },
+    {
+        "product_id": "LP006",
+        "product_title": "Asus ROG Zephyrus G14",
+        "product_image": "https://computerimporter.com/image/cache/catalog/products/laptop/asus/Asus%20ROG%20Zephyrus%20G14%20AW%20SE%20GA401QEC-400x400.jpg",
+        "category": "Laptop",
+        "price": 1499.99,
+        "description": "A high-performance gaming laptop with AMD Ryzen and NVIDIA GeForce for a smooth gaming experience.",
+        "Specification": [
+            "AMD Ryzen 9",
+            "16GB RAM",
+            "1TB SSD",
+            "14-inch QHD Display"
+        ],
+        "availability": true,
+        "rating": 4.7
+    },
+    {
+        "product_id": "PH001",
+        "product_title": "Samsung Galaxy S21",
+        "product_image": "https://i0.wp.com/kryinternational.com/wp-content/uploads/2024/02/Samsung-S21-FE.jpg",
+        "category": "Phone",
+        "price": 799.99,
+        "description": "A premium smartphone with a stunning display, excellent camera, and powerful performance.",
+        "Specification": [
+            "Exynos 2100",
+            "8GB RAM",
+            "128GB Storage",
+            "6.2-inch FHD+ Display"
+        ],
+        "availability": true,
+        "rating": 4.5
+    },
+    {
+        "product_id": "PH002",
+        "product_title": "iPhone 13",
+        "product_image": "https://adminapi.applegadgetsbd.com/storage/media/large/iPhone-13-Green-1718.jpg",
+        "category": "iPhone",
+        "price": 829.99,
+        "description": "Apple's latest iPhone with A15 Bionic chip and advanced dual-camera system.",
+        "Specification": [
+            "A15 Bionic",
+            "128GB Storage",
+            "6.1-inch Super Retina XDR Display"
+        ],
+        "availability": true,
+        "rating": 4.6
+    },
+    {
+        "product_id": "PH003",
+        "product_title": "OnePlus 9",
+        "product_image": "https://www.shopz.com.bd/wp-content/uploads/2021/11/Oneplus-9-Pro-12-256-1.jpg",
+        "category": "Phone",
+        "price": 729.99,
+        "description": "A flagship phone with a 120Hz Fluid Display and Hasselblad camera for excellent photography.",
+        "Specification": [
+            "Snapdragon 888",
+            "8GB RAM",
+            "128GB Storage",
+            "6.55-inch FHD+ Display"
+        ],
+        "availability": true,
+        "rating": 4.4
+    },
+    {
+        "product_id": "AC001",
+        "product_title": "Sony WH-1000XM4",
+        "product_image": "https://www.onixbd.com/image/cache/catalog/Accessories/headphone/sony/wh-1000xm4/sony-wh-1000xm4-wireless-headphone-4-412x412.jpg",
+        "category": "Accessories",
+        "price": 349.99,
+        "description": "Industry-leading noise-canceling headphones with premium sound and long battery life.",
+        "Specification": [
+            "Noise Cancellation",
+            "Up to 30 hours battery life",
+            "Bluetooth 5.0"
+        ],
+        "availability": true,
+        "rating": 4.8
+    },
+    {
+        "product_id": "AC002",
+        "product_title": "Logitech MX Master 3",
+        "product_image": "https://gadgetnovabd.com/wp-content/uploads/2023/01/Logitech-MX-Master-3s-550x550h.jpg",
+        "category": "Accessories",
+        "price": 99.99,
+        "description": "An ergonomic and customizable mouse designed for professionals.",
+        "Specification": [
+            "4000 DPI",
+            "USB-C Charging",
+            "Bluetooth/USB Receiver"
+        ],
+        "availability": true,
+        "rating": 4.7
+    },
+    {
+        "product_id": "SW001",
+        "product_title": "Apple Watch Series 7",
+        "product_image": "https://assets.gadgetandgear.com/upload/product/20211124_1637737800_997796.png",
+        "category": "Smart Watches",
+        "price": 399.99,
+        "description": "A smartwatch with a larger display, advanced health tracking, and seamless integration with iPhone.",
+        "Specification": [
+            "Always-On Retina Display",
+            "ECG and Blood Oxygen Monitor",
+            "50m Water Resistance"
+        ],
+        "availability": true,
+        "rating": 4.9
+    },
+    {
+        "product_id": "SW002",
+        "product_title": "Samsung Galaxy Watch 4",
+        "product_image": "https://www.dakhm.com/wp-content/uploads/2022/02/Samsung-Galaxy-Watch-4-Smartwatch.jpg",
+        "category": "Smart Watches",
+        "price": 249.99,
+        "description": "A powerful smartwatch with advanced fitness tracking and compatibility with Android devices.",
+        "Specification": [
+            "Super AMOLED Display",
+            "BioActive Sensor",
+            "Wear OS"
+        ],
+        "availability": true,
+        "rating": 4.6
+    },
+    {
+        "product_id": "MB001",
+        "product_title": "MacBook Pro 14 M1",
+        "product_image": "https://assets.gadgetandgear.com/upload/product/20211111_1636605020_401459.png",
+        "category": "MacBook",
+        "price": 1999.99,
+        "description": "A powerful MacBook with the M1 chip, incredible performance, and stunning Liquid Retina XDR display.",
+        "Specification": [
+            "Apple M1 Pro chip",
+            "16GB RAM",
+            "512GB SSD",
+            "14-inch Liquid Retina XDR Display"
+        ],
+        "availability": true,
+        "rating": 4.9
+    },
+    {
+        "product_id": "MB002",
+        "product_title": "MacBook Air 13",
+        "product_image": "https://adminapi.applegadgetsbd.com/storage/media/large/MacBook-Air-M3-13-Inch-Midnight-7621.jpg",
+        "category": "MacBook",
+        "price": 999.99,
+        "description": "Apple's ultra-light and portable laptop, perfect for students and professionals.",
+        "Specification": [
+            "Apple M1 chip",
+            "8GB RAM",
+            "256GB SSD",
+            "13.3-inch Retina Display"
+        ],
+        "availability": true,
+        "rating": 4.8
+    }
+]
