@@ -1,11 +1,11 @@
 import React from 'react';
-import { addCartProduct, getCartProducts } from '../localData/localData';
+import { addCartProduct, getCartProducts, removeCartProduct, removeWishlistProduct } from '../localData/localData';
 import { useLocation } from 'react-router-dom';
 import { IoMdClose } from "react-icons/io";
-const ReuseableCard = ({product}) => {
+const ReuseableCard = ({ product, removedCart ,removedWishlist}) => {
     const { pathname } = useLocation()
-    const {product_title, product_image, price, description} = product;
-    console.log(product)
+    const { product_title, product_image, price, description, product_id } = product;
+
     // handle add to cart button
     const handleAddToCart = product => {
         const previousProducts = getCartProducts()
@@ -17,25 +17,41 @@ const ReuseableCard = ({product}) => {
             alert('already exist')
         }
     }
+    // handle delete btn
+        function handleRemoveCart(id){
+            removeCartProduct(id)
+            removedCart(id)
+        }
+        const handleRemoveWishlist=(id)=>{
+            removeWishlistProduct(id)
+            removedWishlist(id)
 
-
+        }
     return (
         <div className='relative flex p-6 bg-white mb-6 rounded-2xl gap-6'>
             <div className='border rounded-2xl'>
-                <img src={product_image} 
-                className='h-[124px] rounded-2xl'
-                alt="" />
+                <img src={product_image}
+                    className={` object-cover rounded-2xl ${pathname === '/dashboard' ? 'h-[124px] w-[200px]' : 'h-[200px] w-[274px]'}`}
+                    alt="" />
             </div>
             <div className='space-y-4'>
                 <h4 className='font-semibold text-2xl'>{product_title}</h4>
                 <p className='text-lg text-gray-500'>{description}</p>
                 <p className='font-semibold text-xl'>Price: $ {price}</p>
-                {pathname === '/dashboard/wishlist' && <button onClick={() => handleAddToCart(product)}>Add To Cart</button>}
+                {pathname === '/dashboard/wishlist' && <button
+                    onClick={() => handleAddToCart(product)}
+                    className='px-6 py-3 border-2 border-primary-color rounded-full text-primary-color text-lg font-semibold hover:text-white hover:bg-primary-color'
+                >Add To Cart</button>}
             </div>
             <div className='absolute top-7 right-7'>
-                <button className='p-2 border border-red-600 text-red-600 rounded-full '>
-                    <IoMdClose></IoMdClose>
-                </button>
+                {pathname === '/dashboard' ?
+                    <button onClick={() => handleRemoveCart(product_id)} className='p-2 border border-red-600 text-red-600 rounded-full '>
+                        <IoMdClose></IoMdClose>
+                    </button> :
+                    <button onClick={() => handleRemoveWishlist(product_id)} className='p-2 border border-red-600 text-red-600 rounded-full '>
+                        <IoMdClose></IoMdClose>
+                    </button>}
+
             </div>
         </div>
     );

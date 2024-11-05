@@ -2,6 +2,7 @@
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { FaRegHeart } from "react-icons/fa";
 import { BsCart3 } from "react-icons/bs";
+import { getCartProducts, getWishlistProducts } from '../../localData/localData';
 
 const NavBar = () => {
     const {pathname} = useLocation()
@@ -10,6 +11,9 @@ const NavBar = () => {
         <li><NavLink to={'/statistics'}>Statistics</NavLink></li>
         <li><NavLink to={'/dashboard'}>Dashboard</NavLink></li>
     </>
+    // for cart and wishList
+    const cartProducts = getCartProducts()
+    const wishListProducts = getWishlistProducts()
     return (
         <div className="navbar max-w-7xl mx-auto">
             <div className="navbar-start">
@@ -37,18 +41,18 @@ const NavBar = () => {
                 <Link to={'/'} className="btn btn-ghost text-xl hidden sm:flex">Gadget Heaven</Link>
             </div>
             <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1 font-bold">
+                <ul className="menu menu-horizontal px-1 font-bold gap-3">
                     {links}
                 </ul>
             </div>
             <div className="navbar-end text-xl gap-4">
-                <div className={`relative hover:text-white  ${pathname ==='/'&& ' text-black'}`}>
-                    <Link> <button className={`p-3 border rounded-full hover:bg-primary-color ${pathname ==='/'&& 'bg-white'}`}><BsCart3></BsCart3></button></Link>
-                    <span className='absolute top-0 z-50 right-1 text-base p-[2px]'>0</span>
+                <div className={`relative hover:text-white px-4 py-3 border rounded-full hover:bg-primary-color ${pathname ==='/'&& ' text-black bg-white'}`}>
+                    <Link to={'/dashboard'}> <button ><BsCart3></BsCart3></button></Link>
+                    <span className='absolute top-0 z-50 right-1 text-base p-[2px]'>{cartProducts.length}</span>
                 </div>
-                <div className={`relative hover:text-white  ${pathname ==='/'&& ' text-black'}`}>
-                    <Link> <button className={`p-3 border rounded-full hover:bg-primary-color ${pathname ==='/'&& 'bg-white'}`}><FaRegHeart></FaRegHeart></button></Link>
-                    <span className='absolute top-0 z-50 right-1 text-base p-[2px]'>0</span>
+                <div className={`relative hover:text-white  px-4 py-3 border rounded-full hover:bg-primary-color  ${pathname ==='/'&& ' text-black bg-white'}`}>
+                    <Link to={'/dashboard/wishlist'}> <button ><FaRegHeart></FaRegHeart></button></Link>
+                    <span className='absolute top-0 z-50 right-1 text-base p-[2px]'>{wishListProducts.length}</span>
                 </div>
                 
             </div>

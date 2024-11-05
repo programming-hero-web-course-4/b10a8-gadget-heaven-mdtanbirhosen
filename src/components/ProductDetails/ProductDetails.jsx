@@ -5,10 +5,11 @@ import NavBar from '../Header/NavBar/NavBar';
 import Footer from '../Footer/Footer';
 import { FaRegHeart } from "react-icons/fa";
 import { BsCart3 } from "react-icons/bs";
-
-
 import ReactStars from "react-rating-stars-component";
 import { addCartProduct, addWishlistProduct, getCartProducts, getWishlistProducts } from '../localData/localData';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { useEffect, useState } from 'react';
 
 
 
@@ -18,6 +19,21 @@ const ProductDetails = () => {
     const product = allProducts.find(product => product.product_id === id)
     const { product_id, product_title, product_image, category, price, rating, availability, Specification, description, } = product
 
+    const [isInCart, setIsInCart] = useState(false);
+    const [isInWishlist, setIsInWishlist] = useState(false);
+
+    // disable button based on state 
+    useEffect(() => {
+        const previousProducts = getCartProducts();
+        const isExist = previousProducts.some(p => p.product_id === product_id);
+        setIsInCart(isExist);
+    }, [product_id]);
+    // for wishlist
+    useEffect(() => {
+        const previousProducts = getWishlistProducts();
+        const isExist = previousProducts.some(p => p.product_id === product_id);
+        setIsInWishlist(isExist);
+    }, [product_id]);
 
     // react stars
     const roundedRating = Math.round(rating)
@@ -31,25 +47,28 @@ const ProductDetails = () => {
         const isExist = previousProducts.find(p => p.product_id == product.product_id)
         if(!isExist){
             addCartProduct(product)
+            toast.success('added to product Cart')
+            setIsInCart(true);
         }
-        else{
-            alert('already exist')
-        }
+        
     }
+    
+
     // Wishlist button handler
     const handleAddToWishlist = product =>{
         const previousProducts = getWishlistProducts()
         const isExist = previousProducts.find(p => p.product_id == product.product_id)
         if(!isExist){
             addWishlistProduct(product)
+            toast.success('added to product wishlist')
+            setIsInWishlist(true);
         }
-        else{
-            alert('already exist')
-        }
+        
     }
 
     return (
         <div className='bg-[#F6F6F6] sora-font'>
+            <ToastContainer position='top-right'></ToastContainer>
             <NavBar></NavBar>
             <div className='relative'>
                 <ReuseableBanner
@@ -90,11 +109,17 @@ const ProductDetails = () => {
                                 </div>
                                 <div className='flex gap-4 items-center'>
                                     <div  >
-                                         <button onClick={() => handleAddToCart(product)} className={`px-6 py-3 border rounded-full flex gap-2 items-center font-bold text-lg bg-primary-color text-white`}> <span>Add To Cart</span><BsCart3></BsCart3></button>
+                                         <button 
+                                         disabled={isInCart}
+                                         onClick={() => handleAddToCart(product)} 
+                                         className={`px-6 py-3 border rounded-full flex gap-2 items-center font-bold text-lg bg-primary-color text-white ${isInCart&&'text-gray-600 bg-gray-200'}`}> <span>Add To Cart</span><BsCart3></BsCart3></button>
 
                                     </div>
                                     <div >
-                                        <button onClick={() => handleAddToWishlist(product)} className={`p-3 text-lg border rounded-full hover:bg-primary-color `}><FaRegHeart></FaRegHeart></button>
+                                        <button 
+                                        disabled={isInWishlist}
+                                        onClick={() => handleAddToWishlist(product)} 
+                                        className={`p-3 text-lg border rounded-full text-white bg-primary-color ${isInWishlist&&'text-gray-600 bg-gray-200'}`}><FaRegHeart></FaRegHeart></button>
                                     </div>
                                 </div>
                             </div>

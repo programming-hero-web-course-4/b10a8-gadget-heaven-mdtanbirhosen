@@ -17,6 +17,7 @@ import ProductDetails from './components/ProductDetails/ProductDetails';
 import Cart from './components/Dashboard/Cart/Cart';
 import Wishlist from './components/Dashboard/Wishlist/Wishlist';
 
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -72,6 +73,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    
     <RouterProvider router={router} />
+    
   </StrictMode>,
 )

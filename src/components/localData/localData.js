@@ -1,35 +1,48 @@
 
-const getCartProducts = ()=>{
+const getCartProducts = () => {
     const products = localStorage.getItem('cart');
-    if(products){
+    if (products) {
         return JSON.parse(products)
     }
-    else{
+    else {
         return []
     }
 }
 
-const addCartProduct = (product)=>{
+const removeCartProduct = (id) => {
+    const products = getCartProducts();
+    const remainingProducts = [...products].filter(p=>p.product_id !== id)
+    localStorage.setItem('cart', JSON.stringify(remainingProducts))
+}
+
+const addCartProduct = (product) => {
     const products = getCartProducts();
     const newProducts = [...products, product];
-    localStorage.setItem('cart',JSON.stringify(newProducts))
+    localStorage.setItem('cart', JSON.stringify(newProducts))
 }
 
 // these are for wishlist
-const getWishlistProducts = ()=>{
+const getWishlistProducts = () => {
     const products = localStorage.getItem('wishlist');
-    if(products){
+    if (products) {
         return JSON.parse(products)
     }
-    else{
+    else {
         return []
     }
 }
 
-const addWishlistProduct = (product)=>{
+const removeWishlistProduct = (id) => {
+    console.log('hello')
     const products = getWishlistProducts();
-    const newProducts = [...products, product];
-    localStorage.setItem('wishlist',JSON.stringify(newProducts))
+    const remainingProducts = [...products].filter(p=>p.product_id !== id)
+    localStorage.setItem('wishlist', JSON.stringify(remainingProducts))
 }
 
-export {addCartProduct, addWishlistProduct, getCartProducts,getWishlistProducts}
+const addWishlistProduct = (product) => {
+    const products = getWishlistProducts();
+    const newProducts = [...products, product];
+    localStorage.setItem('wishlist', JSON.stringify(newProducts))
+}
+
+export { addCartProduct, addWishlistProduct, getCartProducts, getWishlistProducts , removeCartProduct, removeWishlistProduct}
