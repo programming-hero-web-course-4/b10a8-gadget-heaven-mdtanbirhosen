@@ -21,6 +21,10 @@ const addCartProduct = (product) => {
     localStorage.setItem('cart', JSON.stringify(newProducts))
 }
 
+const clearCart = ()=>{
+    localStorage.setItem('cart', [])
+}
+
 // these are for wishlist
 const getWishlistProducts = () => {
     const products = localStorage.getItem('wishlist');
@@ -45,4 +49,4 @@ const addWishlistProduct = (product) => {
     localStorage.setItem('wishlist', JSON.stringify(newProducts))
 }
 
-export { addCartProduct, addWishlistProduct, getCartProducts, getWishlistProducts , removeCartProduct, removeWishlistProduct}
+export { addCartProduct, addWishlistProduct, getCartProducts, getWishlistProducts , removeCartProduct, removeWishlistProduct, clearCart}

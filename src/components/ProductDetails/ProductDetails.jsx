@@ -10,6 +10,7 @@ import { addCartProduct, addWishlistProduct, getCartProducts, getWishlistProduct
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useEffect, useState } from 'react';
+import Title from '../Title/Title';
 
 
 
@@ -68,7 +69,12 @@ const ProductDetails = () => {
 
     return (
         <div className='bg-[#F6F6F6] sora-font'>
-            <ToastContainer position='top-right'></ToastContainer>
+            <ToastContainer 
+            position='top-right'
+            hideProgressBar
+            autoClose={3000}
+            ></ToastContainer>
+            <Title></Title>
             <NavBar></NavBar>
             <div className='relative'>
                 <ReuseableBanner

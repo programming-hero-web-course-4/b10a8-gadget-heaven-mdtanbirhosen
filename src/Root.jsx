@@ -5,14 +5,16 @@ import { useLocation } from 'react-router-dom';
 import NavBar from './components/Header/NavBar/NavBar';
 import Banner from './components/Header/Banner/Banner';
 
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+
+import Title from './components/Title/Title';
 
 const Root = () => {
     const { pathname } = useLocation();
     return (
         <div className=' bg-[#F6F6F6]'>
-            <ToastContainer/>
+            
+            <Title></Title>
+
             {(pathname === `/product-details/`
                 || pathname === '/statistics'
                 || pathname === '/dashboard'
