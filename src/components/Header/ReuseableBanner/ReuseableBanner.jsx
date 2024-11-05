@@ -10,7 +10,7 @@ const ReuseableBanner = ({ title, id }) => {
                 <p>Explore the latest gadgets that will take your experience to the next level. From smart devices to <br className='hidden md:flex' /> the coolest accessories, we have it all!</p>
                 {(pathname === '/dashboard'
                     || pathname === '/dashboard/wishlist'
-                ) && <div className='flex gap-4 justify-center items-center'>
+                ) && <div className='flex gap-4 justify-center items-center sm:flex-row flex-col'>
                         <Link to={'/dashboard'}>
                         <button 
                         className={`font-semibold text-lg px-14 py-[14px] rounded-full mt-5 border-2 border-white 

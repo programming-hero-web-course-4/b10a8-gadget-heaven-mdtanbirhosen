@@ -52,7 +52,7 @@ const ReuseableCard = ({ product, removedCart, removedWishlist }) => {
                         className='px-6 py-3 border-2 border-primary-color rounded-full text-primary-color text-lg font-semibold hover:text-white hover:bg-primary-color'
                     >Add To Cart</button>}
                 </div>
-                <div className='absolute top-7 right-7'>
+                <div className='absolute top-4 right-4'>
                     {pathname === '/dashboard' ?
                         <button onClick={() => handleRemoveCart(product_id)} className='p-2 border border-red-600 text-red-600 rounded-full '>
                             <IoMdClose></IoMdClose>

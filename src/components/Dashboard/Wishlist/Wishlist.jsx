@@ -10,7 +10,7 @@ const Wishlist = () => {
         setWishlistProduct(remaining)
     }
     return (
-        <div className="max-w-7xl mx-auto mt-11 ">
+        <div className="max-w-7xl mx-auto mt-11 px-3">
             <div className="flex items-center  mb-6">
                 <h3 className="font-bold text-2xl">WishList</h3>
             </div>

@@ -25,7 +25,7 @@ const Cart = () => {
     }
 
     const navigate = useNavigate()
-    const handleClose= ()=>{
+    const handleClose = () => {
         navigate('/')
         clearCart()
     }
@@ -33,19 +33,20 @@ const Cart = () => {
 
 
     return (
-        <div className="max-w-7xl mx-auto mt-11 ">
-            <div className="flex items-center justify-between mb-6">
-                <h3 className="font-bold text-2xl">Cart</h3>
-                <div className="flex items-center gap-6">
+        <div className="max-w-7xl mx-auto mt-11 px-3">
+            <div className="flex items-center flex-col md:flex-row gap-6 mb-6">
+                <div className="flex justify-between items-center w-full">
+                    <h3 className="font-bold text-2xl">Cart</h3>
                     <div className="font-bold text-2xl">Total cost:{cartTotalPrice.toFixed(2)}</div>
-                    <div>
-                        <div><button
-                            onClick={handleSortBtn}
-                            className='flex items-center gap-4 font-semibold text-lg px-8 py-4 bg-white text-primary-color rounded-full  border-2 border-white hover:bg-primary-color hover:text-white'><span>Sort by Price</span> <SlEqualizer></SlEqualizer></button></div>
-                    </div>
-                    <button 
-                    onClick={() => document.getElementById('my_modal_1').showModal()}
-                    className="font-semibold text-lg py-3 px-6 bg-primary-color rounded-full text-white">Purchase</button>
+                </div>
+                <div className="flex items-center flex-col sm:flex-row gap-6">
+                    <button
+                        onClick={handleSortBtn}
+                        className='w-60 flex items-center gap-4 font-semibold text-lg px-8 py-4 bg-white text-primary-color rounded-full  border-2 border-white hover:bg-primary-color hover:text-white'><span>Sort by Price</span> <SlEqualizer></SlEqualizer></button>
+
+                    <button
+                        onClick={() => document.getElementById('my_modal_1').showModal()}
+                        className="font-semibold text-lg py-3 px-6 bg-primary-color rounded-full text-white">Purchase</button>
                 </div>
             </div>
             {/* all added carts are here */}
@@ -60,7 +61,7 @@ const Cart = () => {
 
             {/* modal price button starts*/}
             {/* Open the modal using document.getElementById('ID').showModal() method */}
-            
+
             <dialog id="my_modal_1" className="modal">
                 <div className="modal-box flex flex-col items-center">
                     <img src={verified} className="h-16 " alt="" />
@@ -70,9 +71,9 @@ const Cart = () => {
                     <div className="modal-action">
                         <form method="dialog">
                             {/* if there is a button in form, it will close the modal */}
-                            <button 
-                            onClick={handleClose}
-                            className=" bg-[#E7E7E7] w-full font-semibold py-2 px-20 rounded-full">Close</button>
+                            <button
+                                onClick={handleClose}
+                                className=" bg-[#E7E7E7] w-full font-semibold py-2 px-20 rounded-full">Close</button>
                         </form>
                     </div>
                 </div>

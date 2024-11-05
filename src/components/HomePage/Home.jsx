@@ -11,7 +11,7 @@ const Home = () => {
             .then(data => setCategories(data))
     }, [])
     return (
-        <div className="max-w-7xl mx-auto mt-[230px] md:mt-[400px] lg:mt-[600px] mb-24">
+        <div className="max-w-7xl mx-auto mt-[230px] md:mt-[400px] lg:mt-[600px] mb-24 px-3">
             
             <h1 className="text-center font-bold text-4xl mb-7">Explore Cutting-Edge Gadgets</h1>
             <div className="grid md:grid-cols-6 gap-6">

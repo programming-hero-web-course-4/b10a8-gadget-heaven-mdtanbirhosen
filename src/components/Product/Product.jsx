@@ -5,7 +5,7 @@ const Product = ({ product }) => {
     const { product_image, product_title, price , product_id} = product;
 
     return (
-        <div className="card bg-white  ">
+        <div className="card bg-white  transition-transform transform hover:scale-105  duration-300">
             <figure className="px-5  pt-5">
                 <img
                     src={product_image}
