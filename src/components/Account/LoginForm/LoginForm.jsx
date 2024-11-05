@@ -6,12 +6,12 @@ const LoginForm = () => {
     }
     return (
         <div className='w-full flex items-center justify-center py-12 '>
-            <div className='w-1/3 '>
+            <div className='lg:w-1/3 '>
                 <h2 className='font-bold text-3xl text-center '>Login</h2>
                 <form action="" onSubmit={handleSubmitBtn} className='flex flex-col'>
                     <label htmlFor="email"  className=''> Email </label>
                     <br />
-                    <input type="email" id="email" name="email" placeholder='Enter email' className='pl-5 py-2 rounded-lg mb-5' required />
+                    <input type="email" id="email" name="email" placeholder='Enter email' className='pl-5 py-2 rounded-lg ' required />
                     <br />
                     <label htmlFor="password" >Password </label>
                     <br />
