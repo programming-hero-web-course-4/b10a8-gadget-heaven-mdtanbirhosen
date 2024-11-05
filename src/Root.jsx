@@ -18,7 +18,7 @@ const Root = () => {
             {(pathname === `/product-details/`
                 || pathname === '/statistics'
                 || pathname === '/dashboard'
-                || pathname === '/component'
+                || pathname === '/account'
                 || pathname === '/dashboard/wishlist'
 
             ) || <Banner></Banner>}
@@ -27,7 +27,7 @@ const Root = () => {
             {(pathname === '/product-details'
                 || pathname === '/statistics'
                 || pathname === '/dashboard'
-                || pathname === '/component'
+                || pathname === '/account'
                 || pathname === '/dashboard/wishlist'
             ) && <NavBar></NavBar>}
             <div className='min-h-[calc(100vh-492px)] '>

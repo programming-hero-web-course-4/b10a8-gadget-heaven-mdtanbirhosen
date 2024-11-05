@@ -43,36 +43,36 @@ const ProductDetails = () => {
     };
 
     // add to cart button handler
-    const handleAddToCart = product =>{
+    const handleAddToCart = product => {
         const previousProducts = getCartProducts()
         const isExist = previousProducts.find(p => p.product_id == product.product_id)
-        if(!isExist){
+        if (!isExist) {
             addCartProduct(product)
             toast.success('added to product Cart')
             setIsInCart(true);
         }
-        
+
     }
-    
+
 
     // Wishlist button handler
-    const handleAddToWishlist = product =>{
+    const handleAddToWishlist = product => {
         const previousProducts = getWishlistProducts()
         const isExist = previousProducts.find(p => p.product_id == product.product_id)
-        if(!isExist){
+        if (!isExist) {
             addWishlistProduct(product)
             toast.success('added to product wishlist')
             setIsInWishlist(true);
         }
-        
+
     }
 
     return (
         <div className='bg-[#F6F6F6] sora-font'>
-            <ToastContainer 
-            position='top-right'
-            hideProgressBar
-            autoClose={3000}
+            <ToastContainer
+                position='top-right'
+                hideProgressBar
+                autoClose={3000}
             ></ToastContainer>
             <Title></Title>
             <NavBar></NavBar>
@@ -115,17 +115,17 @@ const ProductDetails = () => {
                                 </div>
                                 <div className='flex gap-4 items-center'>
                                     <div  >
-                                         <button 
-                                         disabled={isInCart}
-                                         onClick={() => handleAddToCart(product)} 
-                                         className={`px-6 py-3 border rounded-full flex gap-2 items-center font-bold text-lg bg-primary-color text-white ${isInCart&&'text-gray-600 bg-gray-200'}`}> <span>Add To Cart</span><BsCart3></BsCart3></button>
+                                        <button
+                                            disabled={isInCart}
+                                            onClick={() => handleAddToCart(product)}
+                                            className={`px-6 py-3 border rounded-full flex gap-2 items-center font-bold text-lg  ${isInCart ? 'text-gray-600 bg-gray-200' : 'bg-primary-color text-white'}`}> <span>Add To Cart</span><BsCart3></BsCart3></button>
 
                                     </div>
                                     <div >
-                                        <button 
-                                        disabled={isInWishlist}
-                                        onClick={() => handleAddToWishlist(product)} 
-                                        className={`p-3 text-lg border rounded-full text-white bg-primary-color ${isInWishlist&&'text-gray-600 bg-gray-200'}`}><FaRegHeart></FaRegHeart></button>
+                                        <button
+                                            disabled={isInWishlist}
+                                            onClick={() => handleAddToWishlist(product)}
+                                            className={`p-3 text-lg border rounded-full  ${isInWishlist ? 'text-gray-600 bg-gray-200' : 'text-white bg-primary-color'}`}><FaRegHeart></FaRegHeart></button>
                                     </div>
                                 </div>
                             </div>

@@ -12,11 +12,12 @@ const Title = () => {
       '/statistics': 'Statistics | Gadget Heaven',
       '/dashboard': 'Dashboard | Gadget Heaven',
       '/dashboard/wishlist':'Wishlist | Gadget Heaven',
+      '/account':'Account | Gadget Heaven'
     };
 
     document.title = titles[location.pathname] || 'Gadget Heaven';
   }, [location]);
 
-  return null; // This component does not render anything
+  return null; 
 };
 export default Title;

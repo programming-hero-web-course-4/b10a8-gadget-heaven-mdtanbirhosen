@@ -16,6 +16,8 @@ import CategoryProducts from './components/categoryProducts/CategoryProducts';
 import ProductDetails from './components/ProductDetails/ProductDetails';
 import Cart from './components/Dashboard/Cart/Cart';
 import Wishlist from './components/Dashboard/Wishlist/Wishlist';
+import Account from './components/Account/Account';
+import LoginForm from './components/Account/LoginForm/LoginForm';
 
 
 const router = createBrowserRouter([
@@ -49,17 +51,30 @@ const router = createBrowserRouter([
       {
         path: "/dashboard",
         element: <Dashboard></Dashboard>,
-        children:[
+        children: [
           {
-            path:'/dashboard',
+            path: '/dashboard',
             element: <Cart></Cart>
           },
           {
-            path:'/dashboard/wishlist',
+            path: '/dashboard/wishlist',
             element: <Wishlist></Wishlist>
 
+          },
+
+        ]
+      },
+      {
+        path: '/account',
+        element: <Account></Account>,
+        children:[
+          {
+            path:'/account',
+            element:<LoginForm></LoginForm>
           }
         ]
+        
+        
       }
     ]
 
@@ -73,8 +88,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    
+
     <RouterProvider router={router} />
-    
+
   </StrictMode>,
 )
