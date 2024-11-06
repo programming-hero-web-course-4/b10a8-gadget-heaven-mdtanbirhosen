@@ -32,13 +32,13 @@ const router = createBrowserRouter([
         children: [
           {
             path: '/',
-            loader: () => fetch('../products.json'),
+            loader: () => fetch('/products.json'),
             element: <Products></Products>,
 
           },
           {
             path: 'categories/:category',
-            loader: () => fetch('../products.json'),
+            loader: () => fetch('/products.json'),
             element: <CategoryProducts></CategoryProducts>
           }
         ]
@@ -46,7 +46,7 @@ const router = createBrowserRouter([
 
       {
         path: '/statistics',
-        loader: ()=> fetch('./products.json'),
+        loader: ()=> fetch('/products.json'),
         element: <Statistics></Statistics>
       },
       {
@@ -80,7 +80,7 @@ const router = createBrowserRouter([
   },
   {
     path: '/product-details/:id',
-    loader: () => fetch('../products.json'),
+    loader: () => fetch('/products.json'),
     element: <ProductDetails></ProductDetails>
   },
 ]);
