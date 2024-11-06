@@ -1,7 +1,7 @@
 # Welcome to : Gadget Heaven
 ### Visit my project: [Website- Gadget Heaven](https://phero-gadget-heaven.surge.sh/)
 ---
-### here is the  [Requirement Document Link](./assets/requirement.pdf)
+### here is the  [Requirement Document Link](./requirement.pdf)
 ---
 ### This project Based on Gadgets like : Laptops, Phones, Smart-Watches, Accessories.
 
