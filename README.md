@@ -1,6 +1,8 @@
 # Welcome to : Gadget Heaven
 ### Visit my project: [Website- Gadget Heaven](https://phero-gadget-heaven.surge.sh/)
 ---
+### here is the  [Requirement Document Link](./assets/requirement.pdf)
+---
 ### This project Based on Gadgets like : Laptops, Phones, Smart-Watches, Accessories.
 
 ## List of React Fundamental concepts used in the project:
@@ -24,4 +26,5 @@
 - ### Dashboard has to section Cart & wishlist that's show you different product's.
 - ### Responsive for all devices .
 - ### Account section for your login .
---- Thanks For watching ---
+--- 
+# Thanks For watching 
