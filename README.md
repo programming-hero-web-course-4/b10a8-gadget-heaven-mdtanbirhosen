@@ -18,8 +18,10 @@
 # 5 features of this Project
 
 - ### Dynamic banner that change on every pages and navbar's position and color is different in Home and another page.
+- ### In the statistics page there are a chat based on product's price and rating.
 - ### In Home page there are show all product's as default and 6 different category button is available if you want to see wanted gadget's only.
 - ### Navbar has 4 different routes that show you different pages and on the top right cart and wishlist icon added it's data count is change when you add or remove any product's from cart and wishlist.
 - ### Dashboard has to section Cart & wishlist that's show you different product's.
 - ### Responsive for all devices .
-- ### Account section for your login .I know you want to login ..But You can't.....🤗...It is what it is...
+- ### Account section for your login .
+--- Thanks For watching ---
